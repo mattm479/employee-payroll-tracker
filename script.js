@@ -10,7 +10,10 @@ const collectEmployees = function() {
   while (addMoreEmployees === true) {
     const firstName = prompt("Enter first name:");
     const lastName = prompt("Enter last name:");
-    const salary = +prompt("Enter salary:");
+    let salary = +prompt("Enter salary:");
+
+    if (isNaN(salary)) salary = 0;
+
     const employee = {
       firstName: firstName,
       lastName: lastName,
